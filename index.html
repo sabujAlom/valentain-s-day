@@ -3,54 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+    <script src="https://kit.fontawesome.com/fa503c506a.js" crossorigin="anonymous"></script>
+    
+    <title>valentine's day</title>
+     <style>
         *{
-            padding: 0;
-            margin: 0;
-        }
-        body{
-            background: pink;
-        }
-        .Main{
-            padding-top: 40%;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #FDF0D1;
+    font-family: sans-serif;
+}
+.Main{
+    padding-top: 40%;
 
-        }
-        input{
-            font-size: 30px;
-            width: 200px;
-            border: 2px solid red;
-            border-radius: 20px;
-            background: transparent;
-            padding-left: 10px;
-        }
-        .btn{
-            padding: 10px;
-            font-size: 40px;
-            background: black;
-            color: white;
-            border: 2px solid gray;
-            border-radius: 20px;
-            
-        }
-        .contant{
-            display: none;
-            font-size: 30px;
-            font-family: 'Pacifico', cursive;
-            color: red;
-            text-shadow:  0 0 9px blue,
-                0 0 7px #fff,
-                0 0 10px #fff;
+}
+input{
+    font-size: 30px;
+    width: 200px;
+    border: 2px solid red;
+    border-radius: 20px;
+    background: transparent;
+    padding-left: 10px;
+}
 
-            
-        }
-        .heart{
-            animation: zoom 0.2s linear;
-            amimation-iteration-count: infinite;
+.contant{
+    display: none;
+    font-size: 30px;
+    font-family: 'Pacifico', cursive;
+    color: red;
+    text-shadow:  0 0 9px blue,
+        0 0 7px #fff,
+        0 0 10px #fff;
 
-        }
+    
+}
+.heart{
+    animation: zoom 0.2s linear;
+    amimation-iteration-count: infinite;
 
-    </style>
+}
+#addname{
+    display: inline;
+    border-bottom: 2px solid red;
+    padding:3px;
+    border-radius: 10%;
+    box-shadow: 0px 8px #888888;
+}
+.btn{
+    padding: 10px;
+    font-size: 40px;
+    background:#0B60B0;
+    color: white;
+    border: none ;
+    border-radius: 20px;
+    
+}
+
+.btn-1{
+    padding:10px;
+    border-radius: 50%;
+    background-color: #86B6F6;
+    color:white;
+    border-color: red;
+    box-shadow: 2px 4px #888888;
+    
+}
+.btn-2{
+    padding:10px;
+    border-radius: 50%;
+    background-color: #F1C93B;
+    color:white;
+    border-color: red;
+    box-shadow: 2px 4px #888888;
+}
+.btn-3{
+    padding:10px;
+    border-radius: 50%;
+    background-color: #FFCF96;
+    color:white;
+    border-color: red;
+    box-shadow: 2px 4px #888888;
+}
+#text-move{
+    font-family: sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    
+
+}
+.scrolling-text-container{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-top: 40px;
+}
+.scrolling-text-container span{
+    position: relative;
+    display: inline-block;
+    flex-shrink:0;
+    padding: 8px 20px;
+    background: #f00;
+    color: white;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+    font-weight: 600;
+}
+#love-icon{
+    color: red;
+    margin-right:;
+}
+.happy{
+    color: red;
+    margin: 5px;
+    text:bold;
+    box-shadow: 0px 5px red;
+    padding: 10px;
+
+}
+#loveright{
+    color: red;
+}
+
+
+     </style>
     <script>
         function Show(){
             var name =document.getElementById('name').value;
@@ -66,6 +142,17 @@
                 document.getElementById('c1').style.display ="block";
             }
         }
+
+
+        function makeBlue(){
+            document.body.style.backgroundColor ="#86B6F6";
+        }
+        function makeYellow(){
+            document.body.style.backgroundColor ="#F1C93B";
+        }
+        function makeRed(){
+            document.body.style.backgroundColor ="#FFCF96";
+        }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -73,7 +160,13 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display =swap" rel="stylesheet">
 </head>
+
 <body>
+    <div id="text-move" class="scrolling-text-container">
+        <span>New Post</span>
+        <marquee behavior="" direction="left">Love is beautifull. Each year on February 14, people exchange cards, candy or flowers with their special “valentine.” St. Valentine’s Day is named for a Christian martyr and dates back to the 5th century, but has origins in the Roman holiday Lupercalia.</marquee>
+    </div>
+
     <div class="Main" id="m1">
         <center>
             <h1>ENTER YOUR NAME</h1>
@@ -83,20 +176,32 @@
             <br>
             <br>
             <button class="btn" onclick="Show()">SUBMIT</button>
+
+            <br><br>
+
+            <i class="fa-solid fa-heart" id="love-icon"><span class="happy"><b>Happy Valentin's Day 2024</b></span></i><i class="fa-solid fa-heart" id="loveright"></i>
         </center>
 
     </div>
     <div class="contant" id="c1">
         <center>
-            <h1>I</h1>
+            <h2>I</h2>
             <h1 class="heart">love</h1>
 
             <h1>YOU</h1>
-            <h2>DEAR</h1>
+            <h2>DEAR</h2>
+            <i class="fa-solid fa-heart"></i>
             <h2 id="addname"></h2>
-            <h1>MSA</h1>
-        </center>
+            <i class="fa-solid fa-heart"></i><br><br>
+            <button onclick="makeBlue()" class="btn-1">color</button>
+            <button onclick="makeYellow()" class="btn-2">yellow</button>
+            <button onclick="makeRed()" class="btn-3">color</button>
 
+           
+            
+        </center>
+        
     </div>
+    
 </body>
 </html>
